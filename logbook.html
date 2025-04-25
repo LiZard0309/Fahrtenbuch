@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Driver's Logbook</title>
+    <link rel="stylesheet" href="css/css-logbook.css">
+    <script src="js/logbook-generator.js"></script>
+</head>
+<body>
+<h1>Elektronisches Fahrtenbuch</h1>
+<h3>Geben Sie hier die Daten Ihrer letzten Fahrt ein: </h3>
+
+<br>
+
+<form id="userInput">
+    <!---label for="carType"> Automarke:</label> <input type="text" id="carType" name="carType"><br>
+    <label for="numberPlate"> Autokennzeichen </label> <input type="text" id="numberPlate" name="numberPlate" placeholder="z.B. W-12345L">
+<br> <br-->
+
+    <label for="date">Datum: </label> <input type="date" id="date" name="date">
+    <br>
+    <label>Kilometerstand: </label>
+    <input type="number" id="kmStart" name="kilometres" placeholder="Stand Start">
+    <input type="number" id="kmEnd" name="kilometres" placeholder="Stand Ende">
+    <br>
+
+    <label for="fuelType"> Getankter Treibstoff: </label><select id="fuelType" name="fuelType">
+    <option id="petrol" value="Benzin">Benzin</option>
+    <option id="diesel" value="Diesel">Diesel</option>
+    <option id="super" value="Super">Super</option>
+</select>
+
+    <input type="number" step="0.001" id="fuelPrice" name="fuelPrice" placeholder="Preis pro Liter">
+    <label for="fuelPrice">Euro</label><br>
+
+    <input type="number" id="fuelAmount" name="fuelAmount" placeholder="Getankte Liter">
+    <label for="fuelAmount">Liter</label>
+
+    <br>
+    <button type="button" id="addData" name="addDataButton"> Daten hinzufügen</button>
+    <button type="button" id="deleteLastData" name="deleteLastDataButton"> Letzten Datensatz löschen</button>
+
+</form>
+
+<table id="logbookOutput"></table>
+
+<button type="button" id="deleteAllData" name="deleteAllDataButton"> Alle Daten löschen</button>
+
+<script src="js/main-logbook.js"></script>
+</body>
+</html>
